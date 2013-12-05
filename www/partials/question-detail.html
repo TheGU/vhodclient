@@ -1,0 +1,53 @@
+<loading ng-show="loadTracker.active()">
+    <img src="http://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" width="14" height="14" />
+</loading>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box-content">
+                <span class="meta-date">
+                    <i class="fa fa-clock-o"></i>
+                    <time datetime="{{ question.update }}">{{ question.update }}</time>
+                </span>
+                <div class="header">
+                    <a href="#{{ question.id }}/detail">{{ question.name }}</a>
+                </div>
+                <p>{{ question.description }}</p>
+
+
+            
+                <div>
+                    &nbsp;
+                    <span class="label label-success">
+                        <i class="fa fa-check"></i>{{ question.result.Yes }}</span>
+                    <span class="label label-danger">
+                        <i class="fa fa-times"></i>{{ question.result.No }}</span>
+                    <span class="label label-warning">
+                        <i class="fa fa-question"></i>{{ question.result.Abstain }}</span>                    
+                </div>
+            </div>
+            <div class="box-detail">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-success btn-block" ng-click="voteQuestion(1)">
+                            <i class="fa fa-check"></i> Yes
+                        </button>                        
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-danger btn-block" ng-click="voteQuestion(-1)">
+                            <i class="fa fa-times"></i> No
+                        </button>                        
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-warning btn-block" ng-click="voteQuestion(0)">
+                            <i class="fa fa-question"></i> Abstain
+                        </button>                           
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

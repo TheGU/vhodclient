@@ -1,0 +1,13 @@
+<div class="container">
+    <form role="form" >
+        <div class="form-group">
+            <label for="name">Question</label>
+            <input type="text" class="form-control" id="name" ng-model="question.name"  placeholder="Question Name">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" rows="3" id="description" ng-model="question.description" placeholder="Summary information for this question"></textarea>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="createQuestion()">Submit</button>
+    </form>
+</div>
